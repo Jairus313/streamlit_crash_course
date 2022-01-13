@@ -4,13 +4,13 @@
 
 Before starting with actually let's answers some basics questions.
 
-Q. What is the Streamlit.io?
-A. Streamlit.io is the app framework for machine learning and data science solution where you can write few lines of python code and get your app up running within minutes and you can host too, if you want to share with your friends. More on [Streamlit.io](streamlit.io)
+Q. What is the Streamlit.io?</br>
+A. Streamlit.io is the app framework for machine learning and data science solution where you can write few lines of python code and get your app up running within minutes and you can host too, if you want to share with your friends. More on [Streamlit.io](streamlit.io)</br></br>
 
-Q. Why Streamlit.io or UI in general needed?
-A. <img href="tweet.png"/>
+Q. Why Streamlit.io or UI in general needed?</br>
+A. ![tweet](tweet.png)</br></br>
 
-Q. What are the pre-requisites?
+Q. What are the pre-requisites?</br>
 A. Streamlit is python framework, So Python is must and enough but if you already know Python GUI like PyQt or TKinter then it would be  really.
 
 With these being clear to you, let's start and feel free to jump around on the topic with which you are interested.
