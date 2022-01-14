@@ -2,9 +2,11 @@
 import streamlit as st
 
 
-
-# image
+# existing image
 st.image("image.jpeg")
+
+# image via link
+st.image("https://pbs.twimg.com/profile_images/1366779897423810562/kn7ucNPv_400x400.png")
 
 # exisiting video
 st.video("video.mp4")
