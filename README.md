@@ -30,6 +30,7 @@ With these being clear to you, let's start and feel free to jump around on the t
 - [Plots](#plot)
 - [Media](#media)
 - [Widgets](#widgets)
+- [Sidebars](#sidebars)
 
 <hr>
 
@@ -496,9 +497,9 @@ Code Example:
 
 	if radio and radio == "Tobey Maguire":
 		st.write("The OG Fan ah!")
-	elif  radio  and  radio == "Andrew Garfield":
+	elif radio and radio == "Andrew Garfield":
 		st.write("ngl he is amazing too!")
-	elif  radio  and  radio == "Tom Holland":
+	elif radio and radio == "Tom Holland":
 		st.write("This kid got a heart!")
 	else:
 		st.write("Select one bro, quick..!!")
@@ -523,13 +524,13 @@ Code Example:
 	file_name = st.file_uploader("upload here")
 
 	if  file_name:
-		if  file_name.type == "image/jpeg"  or  file_name.type == "image/png"  or  file_name.type == "image/jpg":
+		if file_name.type == "image/jpeg" or file_name.type == "image/png" or file_name.type == "image/jpg":
 			st.image(file_name)
 
-		elif  file_name.type == "audio/mpeg":
+		elif file_name.type == "audio/mpeg":
 			st.audio(file_name)
 
-		elif  file_name.type == "video/mp4":
+		elif file_name.type == "video/mp4":
 			st.video(file_name)
 
 		else:
@@ -537,3 +538,80 @@ Code Example:
 ```
 
 <hr>
+
+<a  id="sidebars"></a>
+### Sidebars
+
+Sidebars are the navbars in streamlit. Since Streamlit doesn't support navbars officially as per now but we can use sidebars to get it done. Sidebar will be appearing hamburger icon in the app where user can click on the icon which will open a sidebar where options are mentioned where clicking on them will perform the selected task. Here you just need to add sidebar in front of widget element and boom you will have that option on sidebar and that's it.!
+
+Syntax:
+```sh
+	st.sidebar.<widget_element>("element value")
+```
+
+And now I am being lazy will not explain what all widgets do again, you can refer [widget](#Widgets) for that and I will use previous code for this with sidebar infront of each elements.
+
+```python
+	# importing library.
+	import streamlit as st
+
+	# sidebar.
+	side_bar = st.sidebar.button("Demo Button")
+
+	if side_bar:
+		st.write("# You just clicked the button on side bar.")
+
+	name = st.sidebar.text_input("what's your made name?")
+
+	if name:
+		st.write("# you entered _%s_."%name)
+
+	text_area = st.sidebar.text_area("How you felt? When you got Spiderman:No way home's spoilers:smirk:")
+
+	if text_area:
+		st.write(text_area)
+
+	if st.sidebar.checkbox("Do you agree with this without reading it?"):
+		st.write("son of gun, I'm in.!!")
+
+	if st.sidebar.checkbox("Uncheck this one, If you think HTML is not programming language?", value=True):
+		st.write("Really Bro.!?")
+	else:
+		st.write("Now We cool")
+
+	radio = st.sidebar.radio("Choose one", ["Tobey Maguire", "Andrew Garfield", "Tom Holland", "Dialemma!?"], index=3)
+
+	if radio and radio == "Tobey Maguire":
+		st.write("The OG Fan ah!")
+	elif radio and radio == "Andrew Garfield":
+		st.write("ngl he is amazing too!")
+	elif radio and radio == "Tom Holland":
+		st.write("This kid got a heart!")
+	else:
+		st.write("Select one bro, quick..!!")
+
+	option = st.sidebar.selectbox(
+		'Most popular programming language for 2022?',
+		['Python', 'JavaScript', 'GO', 'C++'], index=0)
+	
+	st.write('You selected:', option)
+
+	st.sidebar.multiselect('select anything', ['a', 'b', 'c'])
+
+	slider = st.sidebar.slider('sliders', min_value=-10, max_value=10, value=0, step=2)
+
+	if slider > 0:
+		st.write("#### %d"%slider)
+
+	file_name = st.sidebar.file_uploader("upload here")
+
+	if file_name:
+		if file_name.type == "image/jpeg" or file_name.type == "image/png" or file_name.type == "image/jpg":
+			st.image(file_name)
+		elif file_name.type == "audio/mpeg":
+			st.audio(file_name)
+		elif file_name.type == "video/mp4":
+			st.video(file_name)
+		else:
+			st.write(file_name)
+```
