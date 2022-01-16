@@ -13,17 +13,16 @@ if name:
     st.write("Oh, I see! That's your made up name **{0}**".format(name))
 
 # text area.
-text_area = st.text_area("How you felt? When you got Spiderman:No way home's spoilers:smirk:")
+text_area = st.text_area("How you felt? When you got Spiderman:No way home's spoilers :smirk:")
 
 if text_area:
     st.write(text_area)
-
 
 # check box.
 if st.checkbox("Do you agree with this without reading it?"):
     st.write("son of gun, I'm in.!!")
 
-# with defualt value.
+# with default value.
 if st.checkbox("Uncheck this one, If you think HTML is not programming language?", value=True):
     st.write("Really Bro.!?")
 else:

@@ -1,8 +1,8 @@
 
-# Hey There..! I am **[Sudeep Nellur](sudeepnellur.tech)** aka **[Jairus313](sudeepnellur.tech)** :sunglasses:. Here I am writing this little crash course about **[Streamlit.io](streamlit.io)** which will be more than enough for you to get started and start rolling some cool apps. So let's wrap our head around.!
+## Hey There..! I am **[Sudeep Nellur](https://sudeepnellur.tech/)** aka **[Jairus313](https://sudeepnellur.tech/** :sunglasses:. Here I am writing this little crash course about **[Streamlit.io](https://streamlit.io/)** which will be more than enough for you to get started and start rolling some cool apps. So let's wrap our head around.!
 
   
-### About Streamlit..!
+## About Streamlit..!
 
 Before starting with actually let's answers some basics questions.
 
@@ -17,7 +17,9 @@ A. Streamlit is python framework, So Python is must and enough but if you alread
 
 With these being clear to you, let's start and feel free to jump around on the topic with which you are interested.
 
-### Index
+<hr>
+
+## Index
 
 - [Installation and Get started](#Installation)
 - [General Synatx](#general_syntax)
@@ -27,6 +29,9 @@ With these being clear to you, let's start and feel free to jump around on the t
 - [Display](#display)
 - [Plots](#plot)
 - [Media](#media)
+- [Widgets](#widgets)
+
+<hr>
 
 <a  id="Installation"></a>
 ### Installation and Get started
@@ -64,6 +69,7 @@ Save this script then open the terminal and run below the command which will mak
 ```sh
 	streamlit run your_script_name.py
 ```
+<hr>
 
 <a  id="general_syntax"></a>
 ### General Syntax
@@ -97,6 +103,8 @@ As above mentioned code, we will be importing the **streamlit** as **st** for co
 
 And that's it, Your app will be up and running and this syntax will remains same with little modification which makes streamlit a very handy framework to get started. And to stop, just go back to the terminal/cmd and hit ctrl+ c.
 
+<hr>
+
 <a  id="markdown"></a>
 ### Markdowns
 
@@ -110,17 +118,17 @@ Syntax:
 Code Example:
 ```python
 	# importing library.
-	import  streamlit  as  st
+	import streamlit as st
 
 	# and you have more control, If you use markdown syntax.
 	st.markdown("""
-	# h1 tag
-	## h2 tag
-	### h3 tag
-	#### h4 tag
-	##### h5 tag
-	###### h6 tag
-	""")
+				# h1 tag
+				## h2 tag
+				### h3 tag
+				#### h4 tag
+				##### h5 tag
+				###### h6 tag
+				""")
 
 	## bold text.
 	st.markdown("Some **Bold** text")
@@ -131,6 +139,8 @@ Code Example:
 	# strikethrough text.
 	st.markdown("Some ~~strikethrough~~ text")
 ```
+
+<hr>
 
 <a  id="latex"></a>
 ### Latex
@@ -146,20 +156,22 @@ Syntax:
 Code Example:
 ```python
 	# importing library.
-	import  streamlit  as  st
+	import streamlit as st
 
 	# latex
 	# Do run this code by yourself to see the equation.;)
 	st.latex(r'''
-	x^2 = \frac{n^2+n}{10}
-	''')
+			x^2 = \frac{n^2+n}{10}
+			''')
 
 	st.latex(r'''
-	a + ar + a r^2 + a r^3 +  \cdots + a r^{n-1} =
-	\sum_{k=0}^{n-1} ar^k =
-	a \left(\frac{1-r^{n}}{1-r}\right)
-	''')
+			a + ar + a r^2 + a r^3 +  \cdots + a r^{n-1} =
+			\sum_{k=0}^{n-1} ar^k =
+			a \left(\frac{1-r^{n}}{1-r}\right)
+			''')
 ```
+
+<hr>
 
 <a  id="write"></a>
 ### Write
@@ -174,9 +186,9 @@ Syntax:
 Code Example:
 ```python
 	# importing library.
-	import  streamlit  as  st
-	import  pandas  as  pd
-	import  numpy  as  np
+	import streamlit as st
+	import pandas as pd
+	import numpy as np
 
 	# to print anything using write.
 	st.write(1234)
@@ -185,14 +197,14 @@ Code Example:
 
 	st.write("sum of two values", 2+2)
 
-	  
-
 	# can display the arrays too.
 	data = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
 	columns=['a', 'b', 'c'])
 
 	st.write("before the dataframe", data, "after the dataframe")
 ```
+
+<hr>
 
 <a  id="display"></a>
 ### Display
@@ -217,21 +229,21 @@ Syntax:
 Code Example:
 ```python
 	# importing library.
-	import  streamlit  as  st
-	import  pandas  as  pd
-	import  numpy  as  np
+	import streamlit as st
+	import pandas as pd
+	import numpy as np
 
 	# dataframe.
 	# values in 2D array with column name.
 	df = pd.DataFrame(
-	np.array([["Sudeep Nellur", "Machine Learning Engineer", "https://sudeepnellur.tech/"]]),
-	columns=("Name", "Desgination", "Portfolio"))
+		np.array([["Sudeep Nellur", "Machine Learning Engineer", "https://sudeepnellur.tech/"]]),
+		columns=("Name", "Desgination", "Portfolio"))
 	
 	st.dataframe(df)
 
 	df = pd.DataFrame(
 	np.random.randn(10, 10),
-	columns=('col %d' % i  for  i  in  range(10)))
+	columns=('col %d' % i for i in range(10)))
 
 	st.dataframe(df)
 
@@ -271,6 +283,8 @@ Code Example:
 			})
 ```
 
+<hr>
+
 <a  id="plot"></a>
 ### Plots
 
@@ -294,12 +308,10 @@ Syntax:
 Code Example:
 ```python
 	# importing library.
-	import  streamlit  as  st
-	import  pandas  as  pd
-	import  numpy  as  np
+	import streamlit as st
+	import pandas as pd
+	import numpy as np
 
-	  
-	  
 
 	# line chart
 	chart_data = pd.DataFrame(
@@ -337,6 +349,8 @@ Code Example:
 		''')
 ```
 
+<hr>
+
 <a  id="media"></a>
 ### Media
 
@@ -357,7 +371,7 @@ Syntax:
 Code Example:
 ```python
 	# importing library.
-	import  streamlit  as  st
+	import streamlit as st
 
 	# existing image
 	st.image("image.jpeg")
@@ -366,7 +380,7 @@ Code Example:
 	st.image("https://pbs.twimg.com/profile_images/1366779897423810562/kn7ucNPv_400x400.png")
 
 	# exisiting video
-	st.video("video.mp4")
+	st.video("video.mp4") 
 
 	# video via link
 	st.video("https://www.youtube.com/watch?v=EDQeVhG-68Y")
@@ -374,3 +388,152 @@ Code Example:
 	# audio
 	st.audio("audio.mp3")
 ```
+
+<hr>
+
+<a  id="Widgets"></a>
+### Widgets
+
+So We finally reached this part. Streamlit Widgets are one necessary topic since we can take a lot of inputs from user using these. Following are the some of the important widgets and each widget has it's own functionality depending upon the requirements.
+
+ - **Buttons**: As name says it's a button. Certain operation is performed when a button is pressed or trigger. Button as default will return false and when it is pressed it will return true.
+ 
+	 Syntax:
+	```sh
+		st.button("button value")
+	```
+ - **Text Inputs**: Here we can accept text input from user. Basically it will store the input of the user that is entered in the dialog box and you can easily it by assigning a variable to it.
+ 
+	 Syntax:
+	```sh
+		st.text_input("text label")
+	```
+ - **Text Area**: Text area is as similar as Text input but here you can take lengthier input such as customer's feedback. The Dialog box will be much bigger than text input and it can be also access via assigning a variable.
+ 
+	 Syntax:
+	```sh
+		st.text_area("text label")
+	```
+ - **Check Boxes**:  These are square boxes with message infront of it, usually you see this in terms and conditions agreement where you just blindly select box and hit enter. By default these will be false and also you modify vice versa too.
+ 
+	 Syntax:
+	```sh
+		# value is default value.
+		st.checkbox("message", value=True or False)
+	```
+ - **Radio Buttons**: Radio buttons are similar as checkbox where user can just select it but here these will be in circle shape and user can choose one in multiple choice. Usually you will see these types in online forms while selecting one from multiple options.
+
+	Syntax:
+	```sh
+		# index is default value.
+		st.radio("label", ["list", "of", "multiple", "optiond"], index=0)
+	```
+
+ - **Select boxes**: Select boxes are similar to radio button where user can select one from multiple options and here this will be in drop-down format in which user must click and scroll through the options.
+
+	 Syntax:
+	```sh
+		# index is default value.
+		st.selectbox("label", ["list", "of", "multiple", "optiond"], index=0)
+	```
+
+ - **Multi-Select**: Multi select boxes are similar to select boxes but here user can select multiple option at a same time.
+ 
+	 Syntax:
+	```sh
+		# index is default value.
+		st.multiselect("label", ["list", "of", "multiple", "optiond"])
+	```
+ 
+ - **Slider**: Slider is fun yet intuitive widget where in user can slide the pointer in linear motion to select the desired value, just like adjusting brightness or music in phones. Here streamlit offers a lot of parameters in it like minimum value, maximum values and step interval values with default value.
+ 
+	 Syntax:
+	```sh
+		# value is default value with step as interval.
+		st.slider("label", min_value=-10, max_value=10, value=0, step=2)
+	```
+
+ - **File Uploader**: As name says here we can accept media or file as input. This can accept any file types like image, video, audio and even zip and rar file which make this as powerful and handy widget.
+ 
+	 Syntax:
+	```sh
+		st.file_uploader("label")
+	```
+Code Example:
+```python
+	# importing library.
+	import streamlit as st
+
+
+	# button.
+	if st.button("Demo Button"):
+		st.write("# Hola HUGE TTEEXXTTSSS :joy:.")
+
+	# text input.
+	name = st.text_input("what's your made name?")
+
+	if name:
+		st.write("Oh, I see! That's your made up name **{0}**".format(name))
+
+	# text area.
+	text_area = st.text_area("How you felt? When you got Spiderman:No way home's spoilers :smirk:")
+
+	if text_area:
+		st.write(text_area)
+		
+	# check box.
+	if st.checkbox("Do you agree with this without reading it?"):
+		st.write("son of gun, I'm in.!!")
+
+	# with default value.
+	if st.checkbox("Uncheck this one, If you think HTML is not programming language?", value=True):
+		st.write("Really Bro.!?")
+	else:
+		st.write("Now We cool")
+
+	# radio button
+	radio = st.radio("Choose one", ["Tobey Maguire", "Andrew Garfield", "Tom Holland", "Dialemma!?"], index=3)
+
+	if radio and radio == "Tobey Maguire":
+		st.write("The OG Fan ah!")
+	elif  radio  and  radio == "Andrew Garfield":
+		st.write("ngl he is amazing too!")
+	elif  radio  and  radio == "Tom Holland":
+		st.write("This kid got a heart!")
+	else:
+		st.write("Select one bro, quick..!!")
+
+	# selectbox
+	option = st.selectbox(
+			'Most popular programming language for 2022?',
+			['Python', 'JavaScript', 'GO', 'C++'], index=0)
+
+	st.write('You selected:', option)
+
+	# multiselect
+	st.multiselect('select anything', ['a', 'b', 'c'])
+
+	# slider
+	slider = st.slider('sliders', min_value=-10, max_value=10, value=0, step=2)
+
+	if  slider > 0:
+		st.write("#### %d"%slider)
+
+	# file upload.
+	file_name = st.file_uploader("upload here")
+
+	if  file_name:
+		if  file_name.type == "image/jpeg"  or  file_name.type == "image/png"  or  file_name.type == "image/jpg":
+			st.image(file_name)
+
+		elif  file_name.type == "audio/mpeg":
+			st.audio(file_name)
+
+		elif  file_name.type == "video/mp4":
+			st.video(file_name)
+
+		else:
+			st.write(file_name)
+```
+
+<hr>
