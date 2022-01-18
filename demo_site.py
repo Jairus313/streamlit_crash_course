@@ -11,7 +11,7 @@ if radio and radio == "About Me":
     _, dp, _ = st.columns(3)
 
     with dp:
-        st.image("profile_pic.png")
+        st.image("assets/profile_pic.png")
 
     _, name, _ = st.columns(3)  
 
