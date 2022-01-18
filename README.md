@@ -31,6 +31,7 @@ With these being clear to you, let's start and feel free to jump around on the t
 - [Media](#media)
 - [Widgets](#widgets)
 - [Sidebars](#sidebars)
+- [Animations](#animations)
 
 <hr>
 
@@ -615,3 +616,101 @@ And now I am being lazy will not explain what all widgets do again, you can refe
 		else:
 			st.write(file_name)
 ```
+
+With sidebars We can do a lot of things and We will see about it in later part of this course.
+
+<hr>
+
+<a  id="animations"></a>
+### Animations
+
+You have already seen so many good stuff about streamlit and to elevate this feeling streamlit also going to come with animations too.
+
+Syntax:
+```sh
+	# success message.
+	st.success() 
+
+	# info message.
+	st.info()
+
+	# warning message.
+	st.warning()
+
+	# error message.
+	st.error()
+
+	# exception message is interesting one.
+	try:
+		# some bug in code.
+	except Exception as e:
+		st.exception(e)
+```
+
+These are some of basic animations and there some handy and appealing animations like progress bar and time spinner too.
+
+Syntax:
+```sh
+	# progress bar.
+	progress_bar = st.progress(0)
+
+	for i in range(#some range):
+		progress_bar.progress(i+1)
+
+	# spinner.
+	with st.spinner("message"):
+		#until this block gets completed.
+
+	# this one is bonus, which is balloons.
+	st.balloons()
+```
+
+Code Example:
+```python
+	# importing library.
+	import streamlit as st
+	import time
+
+	# success message.
+	st.success("Success in Green")
+
+	# info message.
+	st.info("Info in Blue")
+
+	# warning message.
+	st.warning("Warning in Yellow")
+
+	# error message.
+	st.error("Error in Red")
+
+	# exception message is interesting one.
+	try:
+		print(some_undefined_variable)
+	except Exception as e:
+		st.exception(e)
+
+	# progress bar.
+	progress_bar = st.progress(0)
+
+	for i in range(100):
+		time.sleep(0.25)
+		progress_bar.progress(i+1)
+
+	# this one is really bonus.
+	st.write("### Balloonssss")
+	st.balloons()
+
+	# spinner.
+	with st.spinner('spinner for 5 secs..'):
+		time.sleep(5)
+
+	st.success('### Done!')
+	st.write("### Again Balloonssss :joy:")
+	st.balloons()
+```
+
+<hr>
+
+:warning: :rotating_light: Are you just scrolling through or writing the code by yourself, If you are just scrolling through this then stop it right now and START CODINNNGG..!!! :rotating_light: :warning: 
+
+<hr>
