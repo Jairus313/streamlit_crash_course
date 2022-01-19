@@ -721,13 +721,13 @@ st.balloons()
 
 Here comes one of the most requested feature in the streamlit community which is layout, this will allow us to have multiple widget in the columns. You can decide the number of elements that you can fit in the same column and each partition can be accessed by assigned variables. To convey this idea in a better way let's just first understand the grid layout design first with some visualisation.
 
-<img  src="assets/Grid_layout.png"  alt="grid layout"/>
+<img  src="assets/Grid_layout.png"  alt="grid layout" width="700" height="500"/>
 
 In the above picture you can see the grid of 4X4(4 boxes in rows and 4 boxes in column) and that is where you can fit in the elements easily, For example we have inserted a element in red colour and assigned 2 grids to it and same goes for another 2 elements in cyan colour too where it occupied one grid each. This is what makes a grid layout design where you can add in the element and also specify the number of grids that needs to be occupied.
 
 Now let us see how layouts work in streamlit with another picture below.
 
-<img  src="assets/Streamlit_grid_layout.png"  alt="grid layout"/>
+<img  src="assets/Streamlit_grid_layout.png"  alt="grid layout" width="700" height="500"/>
 
 Again in the above picture, you can see that we can add in n number of widgets in the same line and the all added widgets will set themselves in equidistant to make it more visually appealing. More the number of widgets lesser the widget width size.
 
