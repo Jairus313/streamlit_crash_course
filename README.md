@@ -32,6 +32,7 @@ With these being clear to you, let's start and feel free to jump around on the t
 - [Widgets](#widgets)
 - [Sidebars](#sidebars)
 - [Animations](#animations)
+- [Layouts](#layout)
 
 <hr>
 
@@ -714,3 +715,117 @@ st.balloons()
 :warning: :rotating_light: Are you just scrolling through or writing the code by yourself, If you are just scrolling through this then stop it right now and START CODINNNGG..!!! :rotating_light: :warning: 
 
 <hr>
+
+<a  id="layout"></a>
+### Layouts
+
+Here comes one of the most requested feature in the streamlit community which is layout, this will allow us to have multiple widget in the columns. You can decide the number of elements that you can fit in the same column and each partition can be accessed by assigned variables. To convey this idea in a better way let's just first understand the grid layout design first with some visualisation.
+
+<img  src="assets/Grid_layout.png"  alt="grid layout"/>
+
+In the above picture you can see the grid of 4X4(4 boxes in rows and 4 boxes in column) and that is where you can fit in the elements easily, For example we have inserted a element in red colour and assigned 2 grids to it and same goes for another 2 elements in cyan colour too where it occupied one grid each. This is what makes a grid layout design where you can add in the element and also specify the number of grids that needs to be occupied.
+
+Now let us see how layouts work in streamlit with another picture below.
+
+<img  src="assets/Streamlit_grid_layout.png"  alt="grid layout"/>
+
+Again in the above picture, you can see that we can add in n number of widgets in the same line and the all added widgets will set themselves in equidistant to make it more visually appealing. More the number of widgets lesser the widget width size.
+
+Syntax:
+```sh
+# 3 widgets in 1 colums
+var1, var2, var3 = st.columns(3)
+
+# adding the widget to first block.
+with var1:
+	st.<widget_name>("message")
+
+# adding the widget to second block.
+with var2:
+	st.<widget_name>("message")
+
+# adding the widget to third block.
+with var3:
+	st.<widget_name>("message")
+```
+Let us see an example  where we will be building a registration template using layouts.
+
+Code example:
+```python
+# importing library.
+import streamlit as st
+
+
+fname, mname, lname = st.columns(3)
+
+with fname:
+	st.text_input("Enter First Name")
+
+with mname:
+	st.text_input("Enter Middle Name")
+
+with lname:
+	st.text_input("Enter Last Name")
+
+st.text_input("Enter Email")
+
+psswd, repsswd = st.columns(2)
+
+with psswd:
+	# type="password" will mask your entry.
+	st.text_input("Enter Password", type="password")
+
+with repsswd:
+	st.text_input("Re-Enter Password", type="password")
+
+dob, gender = st.columns(2)
+
+with dob:
+	st.date_input("Enter Date of birth")
+
+with gender:
+	st.selectbox(
+		'Select the Gender',
+		['Select', 'Male', 'Female', 'Rather not to select'], 
+		index=0)
+
+st.text_area("Enter the Address 1")
+
+st.text_input("Enter the Address 2")
+
+st.text_input("Enter the Landmark") 
+
+state, pin_code = st.columns(2)
+
+with state:
+	st.text_input("Enter State name")
+
+with pin_code:
+	st.text_input("Enter Pin code")
+
+st.checkbox("I agree with all terms and conditions*")
+
+# If you want to center any element,
+# You can just slice the column in odd numbers.
+# 5 slices is more preferred and then add the throwaways
+# on either side with your desired element in place of mid number.
+_, _, button, _, _ = st.columns(5)
+
+with button:
+	st.button('sign in')
+
+st.markdown("***")
+
+_, msg, _ = st.columns(3)
+
+with msg:
+	st.markdown("### Already an user?")
+
+_, login, glogin, _ = st.columns(4)
+
+with login:
+	st.button("Login with Credentials")
+	
+with glogin:
+	st.button("Login with Google Account")
+```
