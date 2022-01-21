@@ -10,7 +10,7 @@ Q. What is the Streamlit.io?</br>
 A. Streamlit.io is the app framework for machine learning and data science solution where you can write few lines of python code and get your app up running within minutes and you can host too, if you want to share with your friends. More on [Streamlit.io](streamlit.io)</br></br>
 
 Q. Why Streamlit.io or UI in general needed?</br>
-A. <img  src="assets/tweet.png"  alt="https://twitter.com/jairus313/status/1472974950508089348?s=20"  width="500"/>
+A. <img  src="assets/tweet.pnga"  alt="https://twitter.com/jairus313/status/1472974950508089348?s=20"  width="500"/>
 
 Q. What are the pre-requisites?</br>
 A. Streamlit is python framework, So Python is must and enough but if you already know Python GUI like PyQt or TKinter and HTML then it would be really.
@@ -33,6 +33,7 @@ With these being clear to you, let's start and feel free to jump around on the t
 - [Sidebars](#sidebars)
 - [Animations](#animations)
 - [Layouts](#layout)
+- [Building a Portfolio](#portfolio)
 
 <hr>
 
@@ -719,15 +720,16 @@ st.balloons()
 <a  id="layout"></a>
 ### Layouts
 
+
 Here comes one of the most requested feature in the streamlit community which is layout, this will allow us to have multiple widget in the columns. You can decide the number of elements that you can fit in the same column and each partition can be accessed by assigned variables. To convey this idea in a better way let's just first understand the grid layout design first with some visualisation.
 
-<img  src="assets/Grid_layout.png"  alt="grid layout" width="700" height="500"/>
+<img  src="assets/Grid_layout.png"  alt="grid layout"  width="700"  height="500"/>
 
 In the above picture you can see the grid of 4X4(4 boxes in rows and 4 boxes in column) and that is where you can fit in the elements easily, For example we have inserted a element in red colour and assigned 2 grids to it and same goes for another 2 elements in cyan colour too where it occupied one grid each. This is what makes a grid layout design where you can add in the element and also specify the number of grids that needs to be occupied.
 
 Now let us see how layouts work in streamlit with another picture below.
 
-<img  src="assets/Streamlit_grid_layout.png"  alt="grid layout" width="700" height="500"/>
+<img  src="assets/Streamlit_grid_layout.png"  alt="grid layout"  width="700"  height="500"/> 
 
 Again in the above picture, you can see that we can add in n number of widgets in the same line and the all added widgets will set themselves in equidistant to make it more visually appealing. More the number of widgets lesser the widget width size.
 
@@ -829,3 +831,33 @@ with login:
 with glogin:
 	st.button("Login with Google Account")
 ```
+
+For live demo click on [link](https://streamlit-layout-demo.herokuapp.com/)
+
+<hr>
+
+<a  id="portfolio"></a>
+### Building a Portfolio
+
+So finally you over here, This is the final part of this small tutorial where we are going to built a portfolio completely from streamlit, To proceed you need to know basic concepts like radio buttons, image insertion, little bit of markdown and etc. Also mainly you should know layout and sidebars. Assuming you did some hands-on and let's get started. As you remember previously I have mentioned that using sidebars you can generate navbars and more. Now in this section you are going to do that but before that let me walk you through pseudo code of it.
+
+```python
+import streamlit as st
+
+
+# name and options in sidebar which acts like navabr
+# which is radio button in this case, clicking on
+# any button will execute the code which is only present 
+# below the option code.
+radio = st.sidebar.radio("Your Name", ["section 1", "section 2"], index=0)
+
+# when button is clicked and section 1 is selected.
+if radio and radio == "section 1":
+	st.text("some text")
+
+# when button is clicked and section 2 is selected.
+elif radio and radio == "section 2":
+	st.button("some button")
+```
+
+In the pseudo code you can guess out the logic that the "some text" will only show on main when "section 1" is clicked in the sidebar and same goes with "some button" where it will show up only when "section 2" is clicked which acts as same as navbars in any website. Here We will also take use of layouts to fit in elements in center of the page for visually appealing purpose and markdowns for H1, H3 and href tags for soical media links or contact info. 
