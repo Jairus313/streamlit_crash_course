@@ -126,13 +126,13 @@ import streamlit as st
 
 # and you have more control, If you use markdown syntax.
 st.markdown("""
-			# h1 tag
-			## h2 tag
-			### h3 tag
-			#### h4 tag
-			##### h5 tag
-			###### h6 tag
-			""")
+	# h1 tag
+	## h2 tag
+	### h3 tag
+	#### h4 tag
+	##### h5 tag
+	###### h6 tag
+	""")
 
 ## bold text.
 st.markdown("Some **Bold** text")
@@ -165,14 +165,14 @@ import streamlit as st
 # latex
 # Do run this code by yourself to see the equation.;)
 st.latex(r'''
-		x^2 = \frac{n^2+n}{10}
-		''')
+	x^2 = \frac{n^2+n}{10}
+	''')
 
 st.latex(r'''
-		a + ar + a r^2 + a r^3 +  \cdots + a r^{n-1} =
-		\sum_{k=0}^{n-1} ar^k =
-		a \left(\frac{1-r^{n}}{1-r}\right)
-		''')
+	a + ar + a r^2 + a r^3 +  \cdots + a r^{n-1} =
+	\sum_{k=0}^{n-1} ar^k =
+	a \left(\frac{1-r^{n}}{1-r}\right)
+	''')
 ```
 
 <hr>
@@ -260,31 +260,28 @@ st.metric(label="Petrol", value="100 ₹", delta="+10%")
 
 # some json too.
 st.json({
-		"id": "0001",
-		"type": "donut",
-		"name": "Cake",
-		"ppu": 0.55,
-		"batters":
-			{
-			"batter":
-				[
-					{ "id": "1001", "type": "Regular" },
-					{ "id": "1002", "type": "Chocolate" },
-					{ "id": "1003", "type": "Blueberry" },
-					{ "id": "1004", "type": "Devil's Food" }
-				]
-			},
-			"topping":
-				[
-					{ "id": "5001", "type": "None" },
-					{ "id": "5002", "type": "Glazed" },
-					{ "id": "5005", "type": "Sugar" },
-					{ "id": "5007", "type": "Powdered Sugar" },
-					{ "id": "5006", "type": "Chocolate with Sprinkles" },
-					{ "id": "5003", "type": "Chocolate" },
-					{ "id": "5004", "type": "Maple" }
-				]
-		})
+	"id": "0001",
+	"type": "donut",
+	"name": "Cake",
+	"ppu": 0.55,
+	"batters":{
+		"batter":[
+			{ "id": "1001", "type": "Regular" },
+			{ "id": "1002", "type": "Chocolate" },
+			{ "id": "1003", "type": "Blueberry" },
+			{ "id": "1004", "type": "Devil's Food" }
+		]},
+		"topping":[
+			{ "id": "5001", "type": "None" },
+			{ "id": "5002", "type": "Glazed" },
+			{ "id": "5005", "type": "Sugar" },
+			{ "id": "5007", "type": "Powdered Sugar" },
+			{ "id": "5006", "type": "Chocolate with Sprinkles" },
+			{ "id": "5003", "type": "Chocolate" },
+			{ "id": "5004", "type": "Maple" }
+			]
+		}
+	)
 ```
 
 <hr>
