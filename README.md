@@ -861,3 +861,181 @@ elif radio and radio == "section 2":
 ```
 
 In the pseudo code you can guess out the logic that the "some text" will only show on main when "section 1" is clicked in the sidebar and same goes with "some button" where it will show up only when "section 2" is clicked which acts as same as navbars in any website. Here We will also take use of layouts to fit in elements in center of the page for visually appealing purpose and markdowns for H1, H3 and href tags for soical media links or contact info. 
+
+With this being said, Let's hope into code itself and make sure you will code along with this and change things according to your wish.
+
+Code Example:
+```python
+# importing library.
+import streamlit as st
+
+# Here the your name will shown in navbar to give a context 
+# of the portfolio and for dummy purpose, I have taken "about me",
+# "experiences", "skillsets" and "projects" which are pretty much 
+# standard section in any portfolio.
+radio = st.sidebar.radio("Your Name", ["About Me", "Experiences", "Skills", "Projects"], index=0)
+
+# When about me is clicked, This section will give briefing.   
+if radio and radio == "About Me":
+
+	# centering the display picture and throwaway 
+	# on side either side will act like padding.
+	_, dp, _ = st.columns(3)
+
+	with dp:
+		st.image("assets/profile_pic.png")
+
+	# centring the name in H1 tag.
+	_, name, _ = st.columns(3)
+
+	with name:
+		st.markdown("# Your Name")
+
+	# Again centering the role/designation
+	_, role, _ = st.columns(3)
+
+	with role:
+		st.markdown("### Your current role")
+
+	# Same for little info.
+	_, info, _ = st.columns(3)
+
+	with info:
+		st.markdown(" A litte about yourself explaining why you do for which you do.")
+
+	# Now adding in the social media links for
+	# contact purposes and here each button will be
+	# added with markdown, As it is a console which will
+	# render html code inside it where we can add href and  
+	# image link as icon and also enable "unsafe_allow_html"
+	# to render the html code with it's funcationality.
+	_, _, _, btn1, btn2, btn3, _, _, _ = st.columns(9)
+
+	# linkedin
+	with btn1:
+		st.markdown('''
+			<a href="https://in.linkedin.com/">
+				<img src="https://img.icons8.com/fluency/48/000000/linkedin.png"/>
+			</a>
+		''', unsafe_allow_html=True)
+
+	# github
+	with btn2:
+	st.markdown('''
+			<a href="https://github.com/">
+				<img src="https://img.icons8.com/fluency/48/000000/github.png"/>
+			</a>
+		''', unsafe_allow_html=True)
+
+	# twitter
+	with btn3:
+		st.markdown('''
+			<a href="https://twitter.com/">
+				<img src="https://img.icons8.com/color/48/000000/twitter--v1.png"/>
+			</a>
+		''', unsafe_allow_html=True)
+
+  
+# When Experiences is clicked, This section will describe previous experiences.  
+elif radio and radio == "Experiences":
+
+	# For simplicity here we use H2 tag for role/designation
+	# H4 tag for number of year of experiences
+	# and little description.
+	st.markdown("## Your role")
+	st.markdown("#### joing date - leaving date")
+	st.text("Descriptions")
+
+	st.markdown("## Your role")
+	st.markdown("#### joing date - leaving date")
+	st.text("Descriptions")
+	
+	st.markdown("## Your role")
+	st.markdown("#### joing date - leaving date")
+	st.text("Descriptions")
+
+# When Skills is clicked, This section will describe skillsets.  
+elif radio and radio == "Skills":
+	
+	# Here each skills are categorized according and
+	# each relevant skills are displayed side by side
+	# for more eye appealing and easy to grasp. Each
+	# skill is a icon which is png image which is loaded via url. 
+	st.markdown("## Programming skills")
+
+	skill1, skill2, skill3, _, _, _ = st.columns(6)
+
+	with skill1:
+		st.markdown('<img src="https://img.icons8.com/fluency/48/000000/python.png"/>', unsafe_allow_html=True)
+
+	with skill2:
+		st.markdown('<img src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>', unsafe_allow_html=True)
+
+	with skill3:
+		st.markdown('<img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"/></br>', unsafe_allow_html=True)
+
+	st.markdown("## Database skills")
+
+	skill1, skill2, skill3, _, _, _ = st.columns(6)
+
+	with skill1:
+		st.markdown('<img src="https://img.icons8.com/color/48/000000/mysql-logo.png"/>', unsafe_allow_html=True)
+
+	with skill2:
+		st.markdown('<img src="https://img.icons8.com/color/48/000000/postgreesql.png"/>', unsafe_allow_html=True)
+
+	with skill3:
+		st.markdown('<img src="https://img.icons8.com/color/48/000000/mongodb.png"/></br>', unsafe_allow_html=True)
+
+	st.markdown("## Deployment skills")
+
+	skill1, skill2, skill3, _, _, _ = st.columns(6)
+
+	with skill1:
+		st.markdown('<img src="https://img.icons8.com/fluency/48/000000/docker.png"/>', unsafe_allow_html=True)
+
+	with skill2:
+		st.markdown('<img src="https://img.icons8.com/fluency/48/000000/github.png"/>', unsafe_allow_html=True)
+
+	with skill3:
+		st.markdown('<img src="https://img.icons8.com/color/48/000000/amazon-web-services.png"/></br>', unsafe_allow_html=True)
+
+# When Projects is clicked, This section will describe some side projects.  
+elif radio and radio == "Projects":
+
+	# Here we take H2 tag for project title and H4 for
+	# problem statement and text for little description
+	# also we use maekdown for github icon which is again
+	# png for clickable link where it can be mapped to
+	# github repo.
+	st.markdown("## Project title 1")
+	st.markdown("#### Project Scope")
+	st.text("Description about project")
+	st.markdown('''source code:
+			<a href="https://github.com/">
+				<img src="https://img.icons8.com/fluency/48/000000/github.png" width="25" height="25"/>
+			</a></br>
+		''', unsafe_allow_html=True)
+
+	st.markdown("## Project title 2")
+	st.markdown("#### Project Scope")
+	st.text("Description about project")
+	st.markdown('''source code:
+			<a href="https://github.com/">
+				<img src="https://img.icons8.com/fluency/48/000000/github.png" width="25" height="25"/>
+			</a></br>
+		''', unsafe_allow_html=True)
+
+	st.markdown("## Project title 3")
+	st.markdown("#### Project Scope")
+	st.text("Description about project")
+	st.markdown('''source code:
+			<a href="https://github.com/">
+				<img src="https://img.icons8.com/fluency/48/000000/github.png" width="25" height="25"/>
+			</a></br>
+		''', unsafe_allow_html=True)
+```
+
+For live demo click on [link](https://streamlit-via-portfolio.herokuapp.com/)
+
+<hr>
