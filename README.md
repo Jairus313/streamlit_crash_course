@@ -1,5 +1,5 @@
 
-## Hey There..! I am **[Sudeep Nellur](https://sudeepnellur.tech/)** aka **[Jairus313](https://sudeepnellur.tech/** :sunglasses:. Here I am writing this little crash course about **[Streamlit.io](https://streamlit.io/)** which will be more than enough for you to get started and start rolling some cool apps. So let's wrap our head around.!
+## Hey There..! I am **[Sudeep Nellur](https://sudeepnellur.tech/)** aka **[Jairus313](https://sudeepnellur.tech/)** :sunglasses:. Here I am writing this little crash course about **[Streamlit.io](https://streamlit.io/)** which will be more than enough for you to get started and start rolling some cool apps. So let's wrap our head around.!
 
   
 ## About Streamlit..!
@@ -10,7 +10,7 @@ Q. What is the Streamlit.io?</br>
 A. Streamlit.io is the app framework for machine learning and data science solution where you can write few lines of python code and get your app up running within minutes and you can host too, if you want to share with your friends. More on [Streamlit.io](streamlit.io)</br></br>
 
 Q. Why Streamlit.io or UI in general needed?</br>
-A. <img  src="assets/tweet.pnga"  alt="https://twitter.com/jairus313/status/1472974950508089348?s=20"  width="500"/>
+A. <img  src="assets/tweet.png"  alt="https://twitter.com/jairus313/status/1472974950508089348?s=20"  width="500"/>
 
 Q. What are the pre-requisites?</br>
 A. Streamlit is python framework, So Python is must and enough but if you already know Python GUI like PyQt or TKinter and HTML then it would be really.
@@ -126,13 +126,13 @@ import streamlit as st
 
 # and you have more control, If you use markdown syntax.
 st.markdown("""
-			# h1 tag
-			## h2 tag
-			### h3 tag
-			#### h4 tag
-			##### h5 tag
-			###### h6 tag
-			""")
+	# h1 tag
+	## h2 tag
+	### h3 tag
+	#### h4 tag
+	##### h5 tag
+	###### h6 tag
+	""")
 
 ## bold text.
 st.markdown("Some **Bold** text")
@@ -165,14 +165,14 @@ import streamlit as st
 # latex
 # Do run this code by yourself to see the equation.;)
 st.latex(r'''
-		x^2 = \frac{n^2+n}{10}
-		''')
+	x^2 = \frac{n^2+n}{10}
+	''')
 
 st.latex(r'''
-		a + ar + a r^2 + a r^3 +  \cdots + a r^{n-1} =
-		\sum_{k=0}^{n-1} ar^k =
-		a \left(\frac{1-r^{n}}{1-r}\right)
-		''')
+	a + ar + a r^2 + a r^3 +  \cdots + a r^{n-1} =
+	\sum_{k=0}^{n-1} ar^k =
+	a \left(\frac{1-r^{n}}{1-r}\right)
+	''')
 ```
 
 <hr>
@@ -260,31 +260,28 @@ st.metric(label="Petrol", value="100 ₹", delta="+10%")
 
 # some json too.
 st.json({
-		"id": "0001",
-		"type": "donut",
-		"name": "Cake",
-		"ppu": 0.55,
-		"batters":
-			{
-			"batter":
-				[
-					{ "id": "1001", "type": "Regular" },
-					{ "id": "1002", "type": "Chocolate" },
-					{ "id": "1003", "type": "Blueberry" },
-					{ "id": "1004", "type": "Devil's Food" }
-				]
-			},
-			"topping":
-				[
-					{ "id": "5001", "type": "None" },
-					{ "id": "5002", "type": "Glazed" },
-					{ "id": "5005", "type": "Sugar" },
-					{ "id": "5007", "type": "Powdered Sugar" },
-					{ "id": "5006", "type": "Chocolate with Sprinkles" },
-					{ "id": "5003", "type": "Chocolate" },
-					{ "id": "5004", "type": "Maple" }
-				]
-		})
+	"id": "0001",
+	"type": "donut",
+	"name": "Cake",
+	"ppu": 0.55,
+	"batters":{
+		"batter":[
+			{ "id": "1001", "type": "Regular" },
+			{ "id": "1002", "type": "Chocolate" },
+			{ "id": "1003", "type": "Blueberry" },
+			{ "id": "1004", "type": "Devil's Food" }
+		]},
+		"topping":[
+			{ "id": "5001", "type": "None" },
+			{ "id": "5002", "type": "Glazed" },
+			{ "id": "5005", "type": "Sugar" },
+			{ "id": "5007", "type": "Powdered Sugar" },
+			{ "id": "5006", "type": "Chocolate with Sprinkles" },
+			{ "id": "5003", "type": "Chocolate" },
+			{ "id": "5004", "type": "Maple" }
+			]
+		}
+	)
 ```
 
 <hr>
@@ -752,6 +749,12 @@ with var3:
 ```
 Let us see an example  where we will be building a registration template using layouts.
 
+
+
+https://user-images.githubusercontent.com/35619570/150649746-0c4d9822-3ea4-4083-95a4-eca07be231a8.mp4
+
+
+
 Code example:
 ```python
 # importing library.
@@ -839,7 +842,15 @@ For live demo click on [link](https://streamlit-layout-demo.herokuapp.com/)
 <a  id="portfolio"></a>
 ### Building a Portfolio
 
-So finally you over here, This is the final part of this small tutorial where we are going to built a portfolio completely from streamlit, To proceed you need to know basic concepts like radio buttons, image insertion, little bit of markdown and etc. Also mainly you should know layout and sidebars. Assuming you did some hands-on and let's get started. As you remember previously I have mentioned that using sidebars you can generate navbars and more. Now in this section you are going to do that but before that let me walk you through pseudo code of it.
+So finally you over here, This is the final part of this small tutorial where we are going to built a portfolio completely from streamlit, To proceed you need to know basic concepts like radio buttons, image insertion, little bit of markdown and etc. Also mainly you should know layout and sidebars. Assuming you did some hands-on and let's get started. As you remember previously I have mentioned that using sidebars you can generate navbars and more.
+
+
+
+https://user-images.githubusercontent.com/35619570/150650000-85494c44-9547-43eb-9d1d-d091306f1445.mp4
+
+
+
+Now in this section you are going to build the portfolio like on the above video but before that let me walk you through pseudo code of it.
 
 ```python
 import streamlit as st
