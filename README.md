@@ -749,6 +749,12 @@ with var3:
 ```
 Let us see an example  where we will be building a registration template using layouts.
 
+
+
+https://user-images.githubusercontent.com/35619570/150649746-0c4d9822-3ea4-4083-95a4-eca07be231a8.mp4
+
+
+
 Code example:
 ```python
 # importing library.
@@ -836,7 +842,15 @@ For live demo click on [link](https://streamlit-layout-demo.herokuapp.com/)
 <a  id="portfolio"></a>
 ### Building a Portfolio
 
-So finally you over here, This is the final part of this small tutorial where we are going to built a portfolio completely from streamlit, To proceed you need to know basic concepts like radio buttons, image insertion, little bit of markdown and etc. Also mainly you should know layout and sidebars. Assuming you did some hands-on and let's get started. As you remember previously I have mentioned that using sidebars you can generate navbars and more. Now in this section you are going to do that but before that let me walk you through pseudo code of it.
+So finally you over here, This is the final part of this small tutorial where we are going to built a portfolio completely from streamlit, To proceed you need to know basic concepts like radio buttons, image insertion, little bit of markdown and etc. Also mainly you should know layout and sidebars. Assuming you did some hands-on and let's get started. As you remember previously I have mentioned that using sidebars you can generate navbars and more.
+
+
+
+https://user-images.githubusercontent.com/35619570/150650000-85494c44-9547-43eb-9d1d-d091306f1445.mp4
+
+
+
+Now in this section you are going to build the portfolio like on the above video but before that let me walk you through pseudo code of it.
 
 ```python
 import streamlit as st
