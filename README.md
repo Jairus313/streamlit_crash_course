@@ -393,41 +393,44 @@ st.video("https://www.youtube.com/watch?v=EDQeVhG-68Y")
 # audio
 st.audio("audio.mp3")
 ```
-media.py
 
 <hr>
 
 <a  id="Widgets"></a>
 ### Widgets
 
-So We finally reached this part. Streamlit Widgets are one necessary topic since we can take a lot of inputs from user using these. Following are the some of the important widgets and each widget has it's own functionality depending upon the requirements.
+So We finally reached to this part. Streamlit Widgets are one of the necessary topic since we can take a lot of inputs from the user using these. Following are the some of the important widgets and each widget has it's own functionality depending upon the requirements.
 
- - **Buttons**: As name says it's a button. Certain operation is performed when a button is pressed or trigger. Button as default will return false and when it is pressed it will return true.
+ - **Buttons**: As the name says it's a button. Certain operation is performed when a button is pressed or triggered. Button as default will return false and when it is pressed it will return true.
  
 	 Syntax:
 	```sh
 	st.button("button value")
 	```
- - **Text Inputs**: Here we can accept text input from user. Basically it will store the input of the user that is entered in the dialog box and you can easily it by assigning a variable to it.
+	
+ - **Text Inputs**: Here we can accept the text input from the user. Basically it will store the input of the user which is entered in the dialog box and you can easily access it by assigning a variable.
  
 	 Syntax:
 	```sh
 	st.text_input("text label")
 	```
- - **Text Area**: Text area is as similar as Text input but here you can take lengthier input such as customer's feedback. The Dialog box will be much bigger than text input and it can be also access via assigning a variable.
+	
+ - **Text Area**: Text area is as similar as the text input but here you can take up the lengthier inputs such as customer's feedback. The Dialog box will be much bigger than text input's dialog box and it can be also accessed via assigning a variable.
  
 	 Syntax:
 	```sh
 	st.text_area("text label")
 	```
- - **Check Boxes**:  These are square boxes with message infront of it, usually you see this in terms and conditions agreement where you just blindly select box and hit enter. By default these will be false and also you modify vice versa too.
+	
+ - **Check Boxes**: These are square boxes with message infront of it, usually you see this in terms and conditions agreement where you just blindly select the box and hit enter. By default these will be false and you modify it to vice versa also.
  
 	 Syntax:
 	```sh
 	# value is default value.
 	st.checkbox("message", value=True or False)
 	```
- - **Radio Buttons**: Radio buttons are similar as checkbox where user can just select it but here these will be in circle shape and user can choose one in multiple choice. Usually you will see these types in online forms while selecting one from multiple options.
+	
+ - **Radio Buttons**: Radio buttons are similar as checkboxes where user can just select it but here these will be in circle shape and user can only choose one in multiple choices. Usually you will see these types in the online forms while selecting one from multiple options.
 
 	Syntax:
 	```sh
@@ -443,7 +446,7 @@ So We finally reached this part. Streamlit Widgets are one necessary topic since
 	st.selectbox("label", ["list", "of", "multiple", "optiond"], index=0)
 	```
 
- - **Multi-Select**: Multi select boxes are similar to select boxes but here user can select multiple option at a same time.
+ - **Multi-Select**: Multi select boxes are similar to select boxes but here user can select multiple options at the same time.
  
 	 Syntax:
 	```sh
@@ -451,7 +454,7 @@ So We finally reached this part. Streamlit Widgets are one necessary topic since
 	st.multiselect("label", ["list", "of", "multiple", "optiond"])
 	```
  
- - **Slider**: Slider is fun yet intuitive widget where in user can slide the pointer in linear motion to select the desired value, just like adjusting brightness or music in phones. Here streamlit offers a lot of parameters in it like minimum value, maximum values and step interval values with default value.
+ - **Slider**: Slider is fun yet intuitive widget where in user can slide the pointer in linear motion to select the desired value, just like adjusting brightness or volumes in the phones. Here streamlit offers a lot of parameters in it like minimum value, maximum values and step interval values with default values.
  
 	 Syntax:
 	```sh
@@ -459,12 +462,13 @@ So We finally reached this part. Streamlit Widgets are one necessary topic since
 	st.slider("label", min_value=-10, max_value=10, value=0, step=2)
 	```
 
- - **File Uploader**: As name says here we can accept media or file as input. This can accept any file types like image, video, audio and even zip and rar file which make this as powerful and handy widget.
+ - **File Uploader**: As the name says here we can accept the media or file as the input. This can accept any file types like image, video, audio or even a zip and rar file which make this as powerful and handy widget.
  
 	 Syntax:
 	```sh
 	st.file_uploader("label")
 	```
+	
 Code Example:
 ```python
 # importing library.
@@ -476,10 +480,10 @@ if st.button("Demo Button"):
 	st.write("# Hola HUGE TTEEXXTTSSS :joy:.")
 
 # text input.
-name = st.text_input("what's your made name?")
+name = st.text_input("what's your madeup name?")
 
 if name:
-	st.write("Oh, I see! That's your made up name **{0}**".format(name))
+	st.write("Oh, I see! That's your madeup name **{0}**".format(name))
 
 # text area.
 text_area = st.text_area("How you felt? When you got Spiderman:No way home's spoilers :smirk:")
@@ -488,11 +492,11 @@ if text_area:
 	st.write(text_area)
 	
 # check box.
-if st.checkbox("Do you agree with this without reading it?"):
+if st.checkbox("Do you agree with this without even reading it?"):
 	st.write("son of gun, I'm in.!!")
 
 # with default value.
-if st.checkbox("Uncheck this one, If you think HTML is not programming language?", value=True):
+if st.checkbox("Uncheck this one, If you think HTML is not a programming language?", value=True):
 	st.write("Really Bro.!?")
 else:
 	st.write("Now We cool")
@@ -547,14 +551,14 @@ if  file_name:
 <a  id="sidebars"></a>
 ### Sidebars
 
-Sidebars are the navbars in streamlit. Since Streamlit doesn't support navbars officially as per now but we can use sidebars to get it done. Sidebar will be appearing hamburger icon in the app where user can click on the icon which will open a sidebar where options are mentioned where clicking on them will perform the selected task. Here you just need to add sidebar in front of widget element and boom you will have that option on sidebar and that's it.!
+Sidebars are the navbars in streamlit. Since Streamlit doesn't support navbars officially as per now but we can use sidebars to get it done. Sidebar will be appearing on the left side of the app where user can click on the greater than symbol icon which will open a sidebar where options will be mentioned and clicking on them will perform the selected task. Here as per the syntax you just need to add word "sidebar" in front of widget element and boom you will have that option on the sidebars and that's it.!
 
 Syntax:
 ```sh
 st.sidebar.<widget_element>("element value")
 ```
 
-And now I am being lazy will not explain what all widgets do again, you can refer [widget](#Widgets) for that and I will use previous code for this with sidebar infront of each elements.
+And now I am being the lazy, will not explain what all the widgets do again, you can just refer [widget](#Widgets) for that and I will use the previous code but with "sidebar" word infront of each elements.
 
 ```python
 # importing library.
@@ -566,7 +570,7 @@ side_bar = st.sidebar.button("Demo Button")
 if side_bar:
 	st.write("# You just clicked the button on side bar.")
 
-name = st.sidebar.text_input("what's your made name?")
+name = st.sidebar.text_input("what's your madeup name?")
 
 if name:
 	st.write("# you entered _%s_."%name)
@@ -579,7 +583,7 @@ if text_area:
 if st.sidebar.checkbox("Do you agree with this without reading it?"):
 	st.write("son of gun, I'm in.!!")
 
-if st.sidebar.checkbox("Uncheck this one, If you think HTML is not programming language?", value=True):
+if st.sidebar.checkbox("Uncheck this one, If you think HTML is not a programming language?", value=True):
 	st.write("Really Bro.!?")
 else:
 	st.write("Now We cool")
@@ -628,7 +632,7 @@ With sidebars We can do a lot of things and We will see about it in later part o
 <a  id="animations"></a>
 ### Animations
 
-You have already seen so many good stuff about streamlit and to elevate this feeling streamlit also going to come with animations too.
+You have already seen so many goods stuff about streamlit and to elevate this feeling streamlit also going to come with animations too.
 
 Syntax:
 ```sh
@@ -651,7 +655,7 @@ except Exception as e:
 	st.exception(e)
 ```
 
-These are some of basic animations and there some handy and appealing animations like progress bar and time spinner too.
+Above mentioned are some of the basic animations and there are some more handy and appealing animations like progress bar and time spinner too.
 
 Syntax:
 ```sh
@@ -663,7 +667,7 @@ for i in range(#some range):
 
 # spinner.
 with st.spinner("message"):
-	#until this block gets completed.
+	#waits until this block gets completed.
 
 # this one is bonus, which is balloons.
 st.balloons()
@@ -715,7 +719,7 @@ st.balloons()
 
 <hr>
 
-:warning: :rotating_light: Are you just scrolling through or writing the code by yourself, If you are just scrolling through this then stop it right now and START CODINNNGG..!!! :rotating_light: :warning: 
+:warning: :rotating_light: Are you just scrolling through it or writing the code by yourself, If you are just scrolling through it then stop it right now and START CODINNNGG..!!! :rotating_light: :warning: 
 
 <hr>
 
@@ -723,17 +727,17 @@ st.balloons()
 ### Layouts
 
 
-Here comes one of the most requested feature in the streamlit community which is layout, this will allow us to have multiple widget in the columns. You can decide the number of elements that you can fit in the same column and each partition can be accessed by assigned variables. To convey this idea in a better way let's just first understand the grid layout design first with some visualisation.
+Here comes one of the most requested feature in the streamlit community which is layout, this will allow us to have multiple widget in the same column. You can decide the number of elements that you want to fit in the same column and each partition can be accessed by assigned variables. To convey this idea in a better way let's just first understand the grid layout design with some visualisation.
 
 <img  src="assets/Grid_layout.png"  alt="grid layout"  width="700"  height="500"/>
 
-In the above picture you can see the grid of 4X4(4 boxes in rows and 4 boxes in column) and that is where you can fit in the elements easily, For example we have inserted a element in red colour and assigned 2 grids to it and same goes for another 2 elements in cyan colour too where it occupied one grid each. This is what makes a grid layout design where you can add in the element and also specify the number of grids that needs to be occupied.
+In the above picture you can see the grid of 4X4(4 boxes in rows and 4 boxes in column) and that is where you can fit in the elements easily, For example we have inserted a element in red colour and assigned 2 grids to it and same goes for another 2 elements in cyan colour where we have assigned one grid each. This is what makes this design as grid layout design where you can just add in the elements and also specify the number of grids that needs to be occupied.
 
 Now let us see how layouts work in streamlit with another picture below.
 
 <img  src="assets/Streamlit_grid_layout.png"  alt="grid layout"  width="700"  height="500"/> 
 
-Again in the above picture, you can see that we can add in n number of widgets in the same line and the all added widgets will set themselves in equidistant to make it more visually appealing. More the number of widgets lesser the widget width size.
+Again in the above picture, you can see that we can add in N number of widgets in the same line and all added widgets will set themselves in equidistant to make it more visually appealing. But remember more the number of widgets lesser the widget's width size.
 
 Syntax:
 ```sh
@@ -752,7 +756,7 @@ with var2:
 with var3:
 	st.<widget_name>("message")
 ```
-Let us see an example  where we will be building a registration template using layouts.
+Let us see an example in which we will be building a registration template using layouts.
 
 
 
@@ -816,7 +820,7 @@ with pin_code:
 st.checkbox("I agree with all terms and conditions*")
 
 # If you want to center any element,
-# You can just slice the column in odd numbers.
+# You need just slice the column in odd numbers.
 # 5 slices is more preferred and then add the throwaways
 # on either side with your desired element in place of mid number.
 _, _, button, _, _ = st.columns(5)
@@ -847,7 +851,7 @@ For live demo click on [link](https://streamlit-layout-demo.herokuapp.com/)
 <a  id="portfolio"></a>
 ### Building a Portfolio
 
-So finally you over here, This is the final part of this small tutorial where we are going to built a portfolio completely from streamlit, To proceed you need to know basic concepts like radio buttons, image insertion, little bit of markdown and etc. Also mainly you should know layout and sidebars. Assuming you did some hands-on and let's get started. As you remember previously I have mentioned that using sidebars you can generate navbars and more.
+So finally you over here, This is the final part of this small tutorial where we are going to built a portfolio completely from streamlit, To proceed you need to know basic concepts like radio buttons, image insertion, little bit of markdown and etc. Also mainly you should know layout and sidebars. Assuming you did some hands-on and now let's get started. As you remember previously I have mentioned that using sidebars you can generate navbars and more, Here we are going to do just that.
 
 
 
@@ -855,15 +859,15 @@ https://user-images.githubusercontent.com/35619570/150650000-85494c44-9547-43eb-
 
 
 
-Now in this section you are going to build the portfolio like on the above video but before that let me walk you through pseudo code of it.
+Now in this section we are going to build the portfolio like in the above video but before that let me walk you through pseudo code of it first.
 
 ```python
 import streamlit as st
 
 
 # name and options in sidebar which acts like navabr
-# which is radio button in this case, clicking on
-# any button will execute the code which is only present 
+# in which radio button are options, clicking on
+# any button will execute the code that is only present 
 # below the option code.
 radio = st.sidebar.radio("Your Name", ["section 1", "section 2"], index=0)
 
@@ -876,9 +880,9 @@ elif radio and radio == "section 2":
 	st.button("some button")
 ```
 
-In the pseudo code you can guess out the logic that the "some text" will only show on main when "section 1" is clicked in the sidebar and same goes with "some button" where it will show up only when "section 2" is clicked which acts as same as navbars in any website. Here We will also take use of layouts to fit in elements in center of the page for visually appealing purpose and markdowns for H1, H3 and href tags for soical media links or contact info. 
+In the above pseudo code you can guess out the logic that the "some text" will only show on the page when "section 1" is clicked in the sidebar and same goes with "some button" where it will show up only when "section 2" is clicked which acts as same as navbars in any other websites. Here We will also take use of layouts to fit the elements in the center of the page for visually appealing purpose and markdowns like H1, H3 and href tags for soical media links or contact info. 
 
-With this being said, Let's hope into code itself and make sure you will code along with this and change things according to your wish.
+With this being said, Let's hop into the code itself and make sure that you will code alongside and change the things according to your wish.
 
 Code Example:
 ```python
@@ -888,14 +892,14 @@ import streamlit as st
 # Here the your name will shown in navbar to give a context 
 # of the portfolio and for dummy purpose, I have taken "about me",
 # "experiences", "skillsets" and "projects" which are pretty much 
-# standard section in any portfolio.
+# standard sections in any portfolio.
 radio = st.sidebar.radio("Your Name", ["About Me", "Experiences", "Skills", "Projects"], index=0)
 
-# When about me is clicked, This section will give briefing.   
+# When about me is clicked, This section will give the briefing.   
 if radio and radio == "About Me":
 
 	# centering the display picture and throwaway 
-	# on side either side will act like padding.
+	# on side either side which will act like padding.
 	_, dp, _ = st.columns(3)
 
 	with dp:
@@ -921,9 +925,9 @@ if radio and radio == "About Me":
 
 	# Now adding in the social media links for
 	# contact purposes and here each button will be
-	# added with markdown, As it is a console which will
-	# render html code inside it where we can add href and  
-	# image link as icon and also enable "unsafe_allow_html"
+	# added with markdown, As it will render html code 
+	# inside it where we can add href and image link is 
+	# added as icon and also enable "unsafe_allow_html"
 	# to render the html code with it's funcationality.
 	_, _, _, btn1, btn2, btn3, _, _, _ = st.columns(9)
 
@@ -973,10 +977,10 @@ elif radio and radio == "Experiences":
 # When Skills is clicked, This section will describe skillsets.  
 elif radio and radio == "Skills":
 	
-	# Here each skills are categorized according and
+	# Here each skills are categorized accordingly and
 	# each relevant skills are displayed side by side
-	# for more eye appealing and easy to grasp. Each
-	# skill is a icon which is png image which is loaded via url. 
+	# for more appealing and easy to grasp. Each
+	# skill got icon which is png image which is loaded via url. 
 	st.markdown("## Programming skills")
 
 	skill1, skill2, skill3, _, _, _ = st.columns(6)
@@ -1021,7 +1025,7 @@ elif radio and radio == "Projects":
 
 	# Here we take H2 tag for project title and H4 for
 	# problem statement and text for little description
-	# also we use maekdown for github icon which is again
+	# also we use markdown for github icon which is again
 	# png for clickable link where it can be mapped to
 	# github repo.
 	st.markdown("## Project title 1")
@@ -1055,3 +1059,7 @@ elif radio and radio == "Projects":
 For live demo click on [link](https://streamlit-via-portfolio.herokuapp.com/)
 
 <hr>
+
+And that's it, Phew! There are still few more amazing things that can be done by using streamlit for better UI but this tutorial is acutally aimed for being simple and easy enough to get started, You can find more about streamlit in their [offical documentation](https://streamlit.io/) and also all the code examples that were used in this blog are available with this repo but make sure that you are going to build few things from your side to get better hands-on.
+
+#### Thank you for reading this little blog and If you liked it then please do ⭐ this repo, Happy Coding and Learning.
