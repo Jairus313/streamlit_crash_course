@@ -1,21 +1,21 @@
 
-## Hey There..! I am **[Sudeep Nellur](https://sudeepnellur.tech/)** aka **[Jairus313](https://sudeepnellur.tech/)** :sunglasses:. Here I am writing this little crash course about **[Streamlit.io](https://streamlit.io/)** which will be more than enough for you to get started and start rolling some cool apps. So let's wrap our head around.!
+## Hey There..! I am **[Sudeep Nellur](https://sudeepnellur.tech/)** aka **[Jairus313](https://sudeepnellur.tech/)** :sunglasses:. Here I am writing this little crash course about **[Streamlit.io](https://streamlit.io/)** which will be more than enough for you to get started and start rolling out some cool apps. So let's wrap our head around it now.!
 
   
 ## About Streamlit..!
 
-Before starting with actually let's answers some basics questions.
+Before starting with it but first let's answers some general questions.
 
 Q. What is the Streamlit.io?</br>
-A. Streamlit.io is the app framework for machine learning and data science solution where you can write few lines of python code and get your app up running within minutes and you can host too, if you want to share with your friends. More on [Streamlit.io](streamlit.io)</br></br>
+A. Streamlit.io is the app framework for machine learning and data science solution where you can write few lines of python code and get your app up running within minutes and you can host too if you want to share with your friends. More on refer [Streamlit.io](streamlit.io)</br></br>
 
 Q. Why Streamlit.io or UI in general needed?</br>
 A. <img  src="assets/tweet.png"  alt="https://twitter.com/jairus313/status/1472974950508089348?s=20"  width="500"/>
 
 Q. What are the pre-requisites?</br>
-A. Streamlit is python framework, So Python is must and enough but if you already know Python GUI like PyQt or TKinter and HTML then it would be really.
+A. Streamlit is python framework, So Python is must and enough but if you already know Python GUIs like PyQt or TKinter and HTML then it would be a breeze.
 
-With these being clear to you, let's start and feel free to jump around on the topic with which you are interested.
+With these being clear to you, let's get started and feel free to jump around on the topic with which you are interested.
 
 <hr>
 
@@ -40,7 +40,7 @@ With these being clear to you, let's start and feel free to jump around on the t
 <a  id="Installation"></a>
 ### Installation and Get started
 
-Before start installing the streamlit which is super easy to install make sure that you have got python package manager installed properly. If this is checked then open your terminal or cmd and run the below command.
+Before you start installing the streamlit which is super easy to install but make sure that you have got python package manager installed properly. If this is checked then open your terminal or cmd and run the below command.
 
 ```sh
 # for windows.
@@ -50,7 +50,7 @@ pip install streamlit
 pip3 install streamlit
 ```
 
-This is will take little while and after successfully installed, You can check your installed by running the below command. And this will take you to home page of streamlit which indicates that everything installed properly.
+This is will take a little while and after successfully installed, You can check your installation by running the below command. And this will take you to home page of streamlit which indicates that everything installed properly.
 
 ```sh
 streamlit hello
