@@ -68,17 +68,20 @@ import streamlit as st
 st.title('Just a title')
 ```
 
-Save this script then open the terminal and run below the command which will make app to boot up and this will open your browser for it.
+Save this script then open the terminal and run below the command which will make the app to boot up and this will open your browser for it.
 
 ```sh
 streamlit run your_script_name.py
 ```
+
+And you would able to see the title in your web browser and that's it.
+
 <hr>
 
 <a  id="general_syntax"></a>
 ### General Syntax
 
-Streamlit is very simple and straight forward App framework, the syntax follows as below.
+Streamlit is very simple and straight forward App framework when it comes to syntax and building apps, the syntax follows as below.
 
 ```python
 st.<element_name>(<value>)
@@ -95,24 +98,24 @@ Example:
 # importing library.
 import streamlit as st
 
-# title is the fucntion for title and yes I've just embedded emoji right away.
+# title is the fucntion for titles and yes I've just embedded emoji right away.
 st.title('Jairus313 - This is my made up name :sunglasses:')
 ```
 
-As above mentioned code, we will be importing the **streamlit** as **st** for convenience and next we will create title which is h1 tag in html by using calling the function **title**  and that will be taking one required parameter which is text and yes, you can add emoji too.  Here let's us save this code as **script.py** and run the below command to boot up.
+As above mentioned code, we will be importing the **streamlit** as **st** for convenience and next we will create title which is h1 tag in html by calling the function **title**  and that will be taking one required parameter which is text and yes, you can add emoji too.  Here let's us save this code as **script.py** and run the below command to boot up.
 
 ```sh
 streamlit run script.py
 ```
 
-And that's it, Your app will be up and running and this syntax will remains same with little modification which makes streamlit a very handy framework to get started. And to stop, just go back to the terminal/cmd and hit ctrl+ c.
+And that's it, Your app will be up and running and this syntax will remains same with little modification which makes streamlit a very handy framework to get started. And to stop, just go back to the terminal/cmd and hit `ctrl+ c`.
 
 <hr>
 
 <a  id="markdown"></a>
 ### Markdowns
 
-Markdown is which light-weight markup language which will be used to build up some visually appealing  documentation with some simple text. Here markdown is support in streamlit which give more control to developer and for more do refer this [link](https://www.markdownguide.org/getting-started/). Let's have a look on some below.
+Markdown is a light-weight markup language which will be used to build up some visually appealing documentation with some simple text. Here markdown is supported in streamlit which will give more control to the developer and for more do refer this [link](https://www.markdownguide.org/getting-started/). Let's have a look on some below.
 
 Syntax:
 ```sh
@@ -180,7 +183,7 @@ st.latex(r'''
 <a  id="write"></a>
 ### Write
 
-Streamlit's write is basically a terminal in the app itself and it's most powerful function since it acts as terminal. Here you do many things like printing your output to plotting up the graphs. Let's have a look on it.
+Streamlit's write is basically a terminal in the app itself and it is the most powerful function since it acts as the terminal. Here you can do many things like printing your output to plotting up the graphs. Let's have a look on it.
 
 Syntax:
 ```sh
@@ -205,6 +208,7 @@ st.write("sum of two values", 2+2)
 data = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
 columns=['a', 'b', 'c'])
 
+# you can add up multiple things in go also.
 st.write("before the dataframe", data, "after the dataframe")
 ```
 
