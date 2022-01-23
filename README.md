@@ -217,7 +217,7 @@ st.write("before the dataframe", data, "after the dataframe")
 <a  id="display"></a>
 ### Display
 
-As the name suggests Streamlit Display will be all tables, arrays, json and also some cool metrics too.
+As the name suggests this function will display all the tables, arrays, json and also some cool metrics too.
 
 Syntax:
 ```sh
@@ -242,7 +242,7 @@ import pandas as pd
 import numpy as np
 
 # dataframe.
-# values in 2D array with column name.
+# values in 2D array with column as names.
 df = pd.DataFrame(
 	np.array([["Sudeep Nellur", "Machine Learning Engineer", "https://sudeepnellur.tech/"]]),
 	columns=("Name", "Desgination", "Portfolio"))
@@ -293,7 +293,7 @@ st.json({
 <a  id="plot"></a>
 ### Plots
 
-Streamlit plot's as similar as display, Here instead of tables we will display graphs, plot and diagrams too. Some of them are line chart, area chart, bar chart and many more.
+Streamlit plots are as similar as the display, Here instead of tables we will display the graphs, plots and diagrams too. Some of them are line charts, area charts, bar charts and many more.
 
 Syntax:
 ```sh
@@ -359,7 +359,7 @@ st.graphviz_chart('''
 <a  id="media"></a>
 ### Media
 
-Streamlit also allows us to add-in media files like images, audios and videos. And the best part about it is that you don't necessarily need to have media file stored in your system you can add the media files via link also.
+Streamlit also allows us to add-in media files like images, audios and videos. And the best part about it is that you don't necessarily need to have the media file stored inside your system but you can just add in the media files via url also.
 
 Syntax:
 ```sh
@@ -393,6 +393,7 @@ st.video("https://www.youtube.com/watch?v=EDQeVhG-68Y")
 # audio
 st.audio("audio.mp3")
 ```
+media.py
 
 <hr>
 
